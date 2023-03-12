@@ -39,7 +39,7 @@ h1::after {
 }
 
 .image {
-  max-width: 90%;
+  max-width: 30%;
 }
 
 .css-bayan__item {
@@ -129,7 +129,7 @@ h1::after {
 
 .css-bayan__item:hover .image__icons_plus {
   transition: transform .35s;
-  transform: rotate(90deg);
+  transform: rotate(45deg);
 }
 
 .css-bayan__input:checked ~ .css-bayan__label {
@@ -137,9 +137,11 @@ h1::after {
   color: rgb(4, 88, 62);
 }
 
-.css-bayan__input:checked ~ .css-bayan__label > .image__icons_close {
+.css-bayan:not(:checked) ~ .image__icons_plus {
   display: flex;
 }
+
+
 
 @media (max-width: 1920px) {
 
