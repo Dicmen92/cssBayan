@@ -16,6 +16,14 @@ html {
   margin: 0 auto;
 }
 
+.times {  
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  max-width: 110rem;
+  margin: 0 auto; 
+}
+
 .css-bayan {
   display: flex;
   align-items: center;
