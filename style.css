@@ -9,6 +9,12 @@ html {
   margin-right: calc(-1 * (100vw - 100%));
 }
 
+.pull-request {
+  display: block;
+  margin-bottom: 1.3rem;
+  font-size: 1.3rem;
+}
+
 /*
 .times {
   font-size: 3rem;
@@ -187,6 +193,7 @@ h1::after {
 @media (max-width: 1920px) {
   h1 {
     font-size: 3rem;
+    margin-bottom: 1rem;
   }
 
   .css-bayan {
