@@ -9,6 +9,7 @@ html {
   margin-right: calc(-1 * (100vw - 100%));
 }
 
+/*
 .times {
   font-size: 3rem;
   display: flex;
@@ -16,6 +17,7 @@ html {
   max-width: 110rem;
   margin: 0 auto;
 }
+*/
 
 .container {
   display: flex;
@@ -24,24 +26,12 @@ html {
   margin: 0 auto;
 }
 
-.times {  
-  font-size: 3rem;
-  display: flex;
-  justify-content: center;
-  max-width: 110rem;
-  margin: 0 auto; 
-}
-
 .css-bayan {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   min-width: 80.25rem;
-}
-
-h1 {
-  font-size: 3rem;
 }
 
 h1::after {
@@ -83,11 +73,9 @@ h1::after {
 
 .css-bayan__label {  
   display: flex;
-  font-size: 1.5rem;
   border: 0.0625rem solid rgba(97, 114, 19, 0.486);
   padding: 0.625rem;
   transition: background .2s ease-out;
-  min-width: 80.25rem;
   color: rgb(150, 64, 3);
   transition: 0.3s;
 }
@@ -101,9 +89,10 @@ h1::after {
 
 .css-bayan__image {
   opacity: 0;
-  height: 0px;
+  height: 0;
   padding: 0;
   border: 0;
+  transition: .5s ease;
 }
 
 @keyframes ani {
@@ -123,7 +112,7 @@ h1::after {
   animation: ani 0.8s forwards;
 }
 
-.css-bayan__label:hover ~ .css-bayan__image { 
+.css-bayan__label:hover ~ .css-bayan__image {
   padding-top: 1rem;
   padding-bottom: 1rem;
   display: flex;
@@ -167,6 +156,10 @@ h1::after {
   transform: rotate(45deg);
 }
 
+.css-bayan__input:checked {
+  color: yellow;
+}
+
 
 @media (hover:hover) {
   .css-bayan__item:hover .image__icons_plus {
@@ -182,5 +175,81 @@ h1::after {
 .css-bayan:hover .css-bayan__label {
   color:black
 }
+
+.css-bayan:hover .css-bayan__input:checked + .css-bayan__label > .image__icons_plus {
+  opacity: 1;
+  transition: 0.3s;
+  transform: rotate(45deg);
+}
+
+}
+
+@media (max-width: 1920px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  .css-bayan {
+    min-width: 80.25rem;
+  }
+
+  .css-bayan__label {
+    font-size: 1.5rem;
+    min-width: 80.25rem;
+  }
+}
+
+
+@media (max-width: 820px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .css-bayan {
+    max-width: 46.875rem;
+  }
+
+  .css-bayan__item {
+    max-width: 46.875rem;
+  }
+
+  .css-bayan__label {
+    font-size: 1.2rem;
+    min-width: 46.875rem;
+    max-width: 46.875rem;
+  }
+
+}
+
+
+@media (max-width: 320px) {
+  h1 {
+    font-size: 0.95rem;
+  }
+  h1::after {
+    display: none;
+  }
+
+  .css-bayan {
+    max-width: 17.5rem;
+  }
+
+  .css-bayan__item {
+    max-width: 17.5rem;
+  }
+
+  .css-bayan__label {
+    font-size: 1.2rem;
+    min-width: 17.5rem;
+    max-width: 17.5rem;
+  }
+
+  .css-bayan__input:checked ~ .css-bayan__image .image{
+    max-width: 80%;
+  }
+
+  .dnone {
+    display: none;
+  }
 
 }
