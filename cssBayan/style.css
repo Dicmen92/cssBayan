@@ -1,6 +1,4 @@
-*,
-*::before,
-*::after {
+* {
   box-sizing: border-box;
 }
 
@@ -40,6 +38,7 @@ html {
   min-width: 80.25rem;
 }
 
+/*
 h1::after {
   content: '';
   display: block;
@@ -48,6 +47,7 @@ h1::after {
   width: 100%;
   background-color: rgba(68, 0, 0, 0.815);
 }
+*/
 
 .image {
   max-width: 30%;
@@ -232,9 +232,6 @@ h1::after {
 @media (max-width: 320px) {
   h1 {
     font-size: 0.95rem;
-  }
-  h1::after {
-    display: none;
   }
 
   .css-bayan {
