@@ -38,17 +38,6 @@ html {
   min-width: 80.25rem;
 }
 
-/*
-h1::after {
-  content: '';
-  display: block;
-  margin-top: 1rem;
-  height: 0.2rem;
-  width: 100%;
-  background-color: rgba(68, 0, 0, 0.815);
-}
-*/
-
 .image {
   max-width: 30%;
 }
@@ -208,6 +197,7 @@ h1::after {
 
 
 @media (max-width: 820px) {
+
   h1 {
     font-size: 2rem;
   }
