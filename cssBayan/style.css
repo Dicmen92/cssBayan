@@ -156,7 +156,7 @@ html {
 }
 
 
-@media (hover:hover) {
+@media (min-width: 821px) {
   .css-bayan__item:hover .image__icons_plus {
       opacity: 1;
       transition: 0.3s;
