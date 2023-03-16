@@ -1,0 +1,294 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+  margin-right: calc(-1 * (100vw - 100%));
+}
+
+.pull-request {
+  display: block;
+  margin-bottom: 1.3rem;
+  font-size: 1.3rem;
+}
+
+/*
+.times {
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  max-width: 110rem;
+  margin: 0 auto;
+}
+*/
+
+.container {
+  display: flex;
+  justify-content: center;
+  max-width: 110rem;
+  margin: 0 auto;
+}
+
+.css-bayan {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 80%;
+}
+
+.image {
+  max-width: 30%;
+}
+
+.css-bayan__item {
+  margin-top: -1.1875rem;
+  min-width: 100%;
+}
+
+.image__icons_plus {
+    display: inline-block;
+    height: 1.5rem;
+    width: 1.5rem;
+    margin-left: auto;
+    background-image: url("img/plus-solid.svg");
+    background-repeat: no-repeat;
+    background-size: contain;  
+    opacity: 0;
+    transform: rotate(0deg);
+    transition: transform 0.4s;
+}
+
+.css-bayan__input {
+  width: 0;
+  height: 0;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.css-bayan__label {    
+  display: flex;
+  border: 0.0625rem solid rgba(97, 114, 19, 0.486);
+  padding: 0.625rem;
+  transition: background .2s ease-out;
+  color: rgb(150, 64, 3);
+  transition: 0.3s;
+}
+
+.css-bayan__image {
+  opacity: 0;
+  height: 0;
+  padding: 0;
+  border: 0;
+  transition: .5s ease;
+}
+
+@keyframes ani {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+ .css-bayan__image:active {
+  background-color: red;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0.0625rem solid #3f494b;
+  height: auto;
+
+  animation: ani 0.8s forwards;
+}
+
+.css-bayan__input:checked ~ .css-bayan__image { 
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0.0625rem solid #3f494b;
+  height: auto;
+
+  animation: ani 0.8s forwards;
+}
+
+.css-bayan__input:checked ~ .css-bayan__image {
+  transition: display .35s;
+  display: flex;
+}
+
+.css-bayan__input:checked ~ .css-bayan__label {
+  background-color: #fddc5c;
+  color: rgb(4, 88, 62);
+}
+
+.css-bayan__input:checked ~ .image__icons_plus {
+  opacity: 1;
+  transition: 0.3s;
+  transform: rotate(45deg);
+}
+
+.css-bayan__input:checked {
+  color: yellow;
+}
+
+
+@media (min-width: 821px) {
+
+  .css-bayan__label:hover {
+    cursor: pointer;
+    background-color: #fddc5c;
+    color: rgb(4, 88, 62);
+    box-shadow: 0rem 0.3125rem 0.625rem 0.125rem rgba(34, 60, 80, 0.2);
+  }
+  
+  .css-bayan__label:hover ~ .css-bayan__image {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0.0625rem solid #3f494b;
+    height: auto;
+  
+    animation: ani 0.8s forwards;
+  }
+
+  .css-bayan__image:hover {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0.0625rem solid #3f494b;
+    height: auto;
+  
+    animation: ani 0.8s forwards; 
+  }
+ 
+  .css-bayan__item:hover .image__icons_plus {
+    display: flex;
+    transition: transform .35s;
+    transform: rotate(30deg);
+  }
+  
+  .css-bayan__image:hover {
+    cursor: pointer;
+  }
+
+  .css-bayan:hover ~ .css-bayan__image {
+    transition: display .35s;
+    display: flex;
+  }
+  
+  .css-bayan__item:hover .image__icons_plus {
+    transition: transform .35s;
+    transform: rotate(45deg);
+  }
+
+  .css-bayan__item:hover .image__icons_plus {
+      opacity: 1;
+      transition: 0.3s;
+      transform: rotate(45deg);
+  }
+
+.css-bayan:hover .image__icons_plus {
+  opacity: 1;
+}
+
+.css-bayan:hover .css-bayan__label {
+  color:black
+}
+
+.css-bayan:hover .css-bayan__input:checked + .css-bayan__label > .image__icons_plus {
+  opacity: 1;
+  transition: 0.3s;
+  transform: rotate(45deg);
+}
+
+}
+
+@media (max-width: 1920px) {
+  h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .css-bayan {
+    min-width: 80%;
+  }
+
+  .css-bayan__label {
+    font-size: 1.5rem;
+    min-width: 100%;
+  }
+}
+
+@media (max-width: 1070px) {
+
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 820px) {
+
+  h1 {
+    font-size: 1.28rem;
+  }
+
+  .css-bayan {
+    max-width: 46.875rem;
+  }
+
+  .css-bayan__item {
+    max-width: 46.875rem;
+  }
+
+  .css-bayan__label {
+    font-size: 1.2rem;
+    min-width: 100%;
+    max-width: 100%;    
+  }
+
+}
+
+
+@media (max-width: 570px) {
+  .css-bayan h1 {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .css-bayan {
+    max-width: 17.5rem;
+  }
+
+  .css-bayan__item {
+    max-width: 17.5rem;
+  }
+
+  .css-bayan__label {
+    min-width: 100%;
+    max-width: 100%;
+  }
+
+  .css-bayan__input:checked ~ .css-bayan__image .image{
+    max-width: 80%;
+  }
+
+  .dnone {
+    display: none;
+  }
+}
+
+@media (max-width: 320px) {
+  .css-bayan__label {
+    font-size: 1.2rem;
+    min-width: 100%;
+    max-width: 100%;
+  }
+}
