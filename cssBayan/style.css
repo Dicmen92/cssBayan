@@ -89,12 +89,17 @@ html {
   100% {opacity: 1;}
 }
 
-.css-bayan__image:mousedown {
-  opacity: 0;
-  height: 0;
-  padding: 0;
-  border: 0;
-  transition: .5s ease;
+ .css-bayan__image:active {
+  background-color: red;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0.0625rem solid #3f494b;
+  height: auto;
+
+  animation: ani 0.8s forwards;
 }
 
 .css-bayan__input:checked ~ .css-bayan__image { 
